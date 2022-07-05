@@ -1,0 +1,59 @@
+## env dev
+@apiUrl = http://localhost:8081
+@pseudonym = 106d0229-8c7e-40c0-ae62-285bc63bb209
+@responderUrl = https://e29a-119-76-31-235.ap.ngrok.io/requester/receiveCallback
+
+POST {{ apiUrl }}/addDataSubjectConsent
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+    // "pseudonym": "{{$guid}}",
+    "pseudonym": "{{pseudonym}}",
+    "consent_code": "B001",
+    "consent_version": 1,
+    "accepted_flag": "Y",
+		"responder_id": "0xC5b0f45d8533909a80eA45Ed2FC42bd36C1Cccac",
+    "responder_url": "{{responderUrl}}"
+}
+###
+
+POST {{ callbackUrl }}
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+  "pseudonym": "{{pseudonym}}",
+  "consent_code": "B001",
+  "consent_version": 1,
+  "responder_id": "0xC5b0f45d8533909a80eA45Ed2FC42bd36C1Cccac"
+}
+###
+
+GET {{ apiUrl }}/requester/getReturnValues
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+}
+###
+
+POST {{ apiUrl }}/getDataSubjectConsent
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+    "pseudonym": "{{pseudonym}}",
+    "consent_code": "B001",
+    "consent_version": 1,
+		"responder_id": "0xC5b0f45d8533909a80eA45Ed2FC42bd36C1Cccac"
+}
+###

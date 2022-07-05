@@ -1,0 +1,52 @@
+## env dev
+@apiUrl = http://localhost:8081
+@callbackUrl = https://wise-snail-97.loca.lt/callback
+
+POST {{ apiUrl }}/getActiveConsents
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{}
+
+###
+
+POST {{ apiUrl }}/addConsent
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service B
+transaction-date: {{$datetime iso8601}}
+
+{
+	"consent_code": "B001",
+	"consent_detail": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+	"consent_version": 1.1,
+	"data_retention": 90,
+	"requester_id": "0xD10c154eCE5256422Dea1C68613C96AFE74513C2",
+	"requester_url": "http://localhost:8081/requester/receiveCallback",
+	"data_fields": [
+		{
+			"field_name": "Name"
+		},
+		{
+			"field_name": "BirthDate"
+		},
+		{
+			"field_name": "BirthDefects"
+		}
+	]
+}
+
+###
+
+POST {{ apiUrl }}/getActiveConsent
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+    "consent_code": "B003",
+    "consent_version": 1
+}

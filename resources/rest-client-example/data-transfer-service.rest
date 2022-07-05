@@ -1,0 +1,15 @@
+## env dev
+@apiUrl = http://localhost:8081
+
+POST {{ apiUrl }}/responder/receiveData
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+  "request_id": "ServiceB-1656697593", 
+  "pseudonym": "106d0229-8c7e-40c0-ae62-285bc63bb209", 
+  "encrypted_data": "QUwJnFnJQutw9Ew+n0PHeQvJfCRg1L1JJexXbC7a1H95El7VQIgJbH0NE4UY+SOcJc8VGUz5uTE936/gpLP2KHYDKFDpGi1F+KVFt1FqoKcOM48VwAI5BegrYhPcfZeKtrpMNLQrPBpAbU6RBtPR6fZAVpSL8g876hRbVep8VkI="
+}
+###

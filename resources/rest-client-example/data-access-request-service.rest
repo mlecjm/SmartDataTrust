@@ -1,0 +1,21 @@
+## env dev
+@apiUrl = http://localhost:8081
+@pseudonym = 106d0229-8c7e-40c0-ae62-285bc63bb209
+@dataTransferUrl = https://e29a-119-76-31-235.ap.ngrok.io/requester/receiveData
+@requestId = ServiceB-1656732250
+
+POST {{ apiUrl }}/submitRequest
+Content-Type: application/json
+# request-id: ref-no-{{$datetime iso8601}}
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service B
+transaction-date: {{$datetime iso8601}}
+
+{
+  "request_id": "{{requestId}}",
+  "pseudonym": "{{pseudonym}}",
+  "consent_code": "B001",
+  "consent_version": 1,
+  "responder_id": "0xC5b0f45d8533909a80eA45Ed2FC42bd36C1Cccac",
+  "data_transfer_url": "{{dataTransferUrl}}"
+}

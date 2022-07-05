@@ -1,0 +1,18 @@
+blockchain:
+  address: http://127.0.0.1:8546
+api:
+  consent:
+    compiled_contract_path: build/contracts/ConsentContract.json
+    deployed_contract_address: '0xDc3E2a308dDFd1ed63aD5F39cd9E9AF30994e471'
+  data_subject_consent:
+    compiled_contract_path: build/contracts/DataSubjectConsentContract.json
+    deployed_contract_address: '0x9d5208fda06981A07909769149649df9c68869C6'
+  data_field:
+    compiled_contract_path: build/contracts/DataFieldContract.json
+    deployed_contract_address: '0xA07CAc7B7900efa39d09C23BFfc9A63888ebc29F'
+  data_access_request:
+    compiled_contract_path: build/contracts/DataAccessRequestContract.json
+    deployed_contract_address: '0x9077426D27DdDE43C3CBEce42dEbe38753293589'
+  data_access_response:
+    compiled_contract_path: build/contracts/DataAccessResponseContract.json
+    deployed_contract_address: '0xDD4d67db7C23Be2A60AC4641AfCed5A7c564fC48'

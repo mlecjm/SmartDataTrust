@@ -1,0 +1,19 @@
+## env dev
+@apiUrl = http://localhost:8081
+@requestId = ServiceB-1656732250
+@responseId = ServiceA-1656732319
+@responderUrl = https://e29a-119-76-31-235.ap.ngrok.io/responder/receiveCallback
+
+POST {{ apiUrl }}/submitResponse
+Content-Type: application/json
+request-id: ref-no-{{$datetime iso8601}}
+caller-id: Service A
+transaction-date: {{$datetime iso8601}}
+
+{
+    "response_id": "{{responseId}}",
+    "request_id": "{{requestId}}",
+    "accepted_flag": "Y",
+    "accepted_message": "Accept a data access request.",
+    "responder_url": "{{responderUrl}}"
+}

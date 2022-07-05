@@ -1,0 +1,13 @@
+{
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "bridge": "./node_modules/.bin/ethereum-bridge -H 127.0.0.1 -p 8546",
+    "chain": "ganache-cli -p 8546 --gasLimit=7992181 --gasPrice 10000000000 --defaultBalanceEther 100000"
+  },
+  "dependencies": {
+    "ethereum-bridge": "^0.6.2"
+  }
+}
