@@ -105,7 +105,7 @@ python -m unittest tests/test_01_requester_add_consent.py
 │  ├─Migrations.sol 
 ├─migrations/                    Directory for scriptable deployment files
 │  ├─1_initial_migrations.js 	
-│  ├─2_deploy_contracts.js.      Deploys Smart Contracts
+│  ├─2_deploy_contracts.js       Deploys Smart Contracts
 ├─resources/
 │  ├─config.yaml                 Contains Smart Contracts' address 
 ├─tests/                         Directory for test files for testing your application and contracts
