@@ -49,7 +49,7 @@ The following command is used to install Python dependencies.
 pip install -r requirements.txt
 ```
 
-After successfully deploying Smart Contracts on the blockchain, you need to update Smart Contracts' address into `config.yml` within `resources` folder. Then, you can start a Python REST API using the following command.
+After successfully deploying Smart Contracts on the blockchain, you need to update Smart Contracts' address into `config.yaml` within `resources` folder. Then, you can start a Python REST API using the following command.
 ```bash
 python main.py
 ```
