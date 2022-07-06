@@ -1,3 +1,4 @@
+
 # SmartDataTrust
 
 The SmartDataTrust is a platform that implemented a Python REST API with Smart Contracts written in Solidity to enable consent management in data sharing. The platform has the complete development and integration tests performed on a local blockchain with Ganache. It provides essential technical insights into implementing consent management functionality among distributed services.
@@ -64,9 +65,9 @@ python -m unittest tests/test_01_requester_add_consent.py
 ------------
 
 ## Project Structure
-```
+```html
 /
-├─api/       			                    Contains all Python code
+├─api/                           Contains all Python code
 │  ├─business_logic
 │  │    ├─consent_service.py
 │  │    ├─data_access_request_service.py
@@ -80,31 +81,18 @@ python -m unittest tests/test_01_requester_add_consent.py
 │  │    ├─blockchain_connector.py
 │  │    ├─rest_client.py
 │  ├─constant/
-│  │    ├─message_code.py
 │  ├─controller/
 │  │    ├─consent_controller.py
 │  │    ├─data_access_request_controller.py
 │  │    ├─data_access_response_controller.py
 │  │    ├─data_subject_controller.py
 │  ├─domain/
-│  │    ├─consent.py
-│  │    ├─data_access_request.py
-│  │    ├─data_access_response.py
-│  │    ├─data_field.py
-│  │    ├─data_subject_consent.py
-│  │    ├─header.py
-│  │    ├─server_reponse.py
-│  │    ├─status_response.py
 │  ├─exception/
-│  │    ├─service_exception.py
-│  │    ├─validation_exception.py
 │  ├─schema/
 │  ├─util/
 ├─bootstrap.py 	
-├─contracts/ 			                   Directory for Solidity contracts
-│  ├─libraries/
-│  │    ├─provableAPI.sol
-│  │    ├─stringUtils.sol       
+├─contracts/                     Directory for Solidity contracts
+│  ├─libraries/     
 │  ├─ConsentContract.sol 		            
 │  ├─DataAccessRequestContract.sol 		  
 │  ├─DataAccessResponseContract.sol 		  
@@ -115,16 +103,16 @@ python -m unittest tests/test_01_requester_add_consent.py
 │  ├─IDataFieldContract.sol 
 │  ├─IDataSubjectConsentContract.sol 
 │  ├─Migrations.sol 
-├─migrations/ 			                 Directory for scriptable deployment files
+├─migrations/                    Directory for scriptable deployment files
 │  ├─1_initial_migrations.js 	
-│  ├─2_deploy_contracts.js 		       Deploys Smart Contracts
+│  ├─2_deploy_contracts.js.      Deploys Smart Contracts
 ├─resources/
-│  ├─config.yaml 	                   Contains Smart Contracts' address 
-├─tests/ 				                     Directory for test files for testing your application and contracts
-├─main.py 				                   A Python srcipt to start a Python REST API
-├─package.json				               Contains NPM dependencies
-├─requirements.txt 				           Contains Python dependencies
-├─truffle-config.js 	               Truffle configuration file
+│  ├─config.yaml                 Contains Smart Contracts' address 
+├─tests/                         Directory for test files for testing your application and contracts
+├─main.py                        A Python srcipt to start a Python REST API
+├─package.json                   Contains NPM dependencies
+├─requirements.txt               Contains Python dependencies
+├─truffle-config.js              Truffle configuration file
 ```
 
 ------------
