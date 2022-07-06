@@ -9,7 +9,7 @@ The platform consists of Smart Contracts and the Python code that implements met
 To deploy and test these Smart Contracts, we use Truffle and Ganache.
 
 * [Truffle](https://www.trufflesuite.com/truffle) is a development environment and testing framework for Smart Contracts for blockchains using the Ethereum Virtual Machine (EVM).
-* [Ganache](https://www.trufflesuite.com/ganache) is an Ethereum-like network emulator that enables a personal Ethereum blockchain on the local network to run execute commands and inspect the state of the blockchain.
+* [Ganache](https://www.trufflesuite.com/ganache) is an Ethereum-like network emulator that enables a personal Ethereum blockchain on the local network to execute commands and inspect the state of the blockchain.
 
 ### Install Truffle and Ganache
 ------------
