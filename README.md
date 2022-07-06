@@ -66,7 +66,7 @@ python -m unittest tests/test_01_requester_add_consent.py
 ## Project Structure
 ```
 /
-├─api/       			                  Contains all Python code
+├─api/       			                    Contains all Python code
 │  ├─business_logic
 │  │    ├─consent_service.py
 │  │    ├─data_access_request_service.py
@@ -101,7 +101,7 @@ python -m unittest tests/test_01_requester_add_consent.py
 │  ├─schema/
 │  ├─util/
 ├─bootstrap.py 	
-├─contracts/ 			                 Directory for Solidity contracts
+├─contracts/ 			                   Directory for Solidity contracts
 │  ├─libraries/
 │  │    ├─provableAPI.py
 │  │    ├─stringUtils.py       
@@ -117,14 +117,14 @@ python -m unittest tests/test_01_requester_add_consent.py
 │  ├─Migrations.sol 
 ├─migrations/ 			                 Directory for scriptable deployment files
 │  ├─1_initial_migrations.js 	
-│  ├─2_deploy_contracts.js 		         Deploys Smart Contracts
+│  ├─2_deploy_contracts.js 		       Deploys Smart Contracts
 ├─resources/
-│  ├─config.yaml 	                     Contains Smart Contracts' address 
-├─tests/ 				                 Directory for test files for testing your application and contracts
-├─main.py 				                 A Python srcipt to start a Python REST API
-├─package.json				             Contains NPM dependencies
-├─requirements.txt 				         Contains Python dependencies
-├─truffle-config.js 	                 Truffle configuration file
+│  ├─config.yaml 	                   Contains Smart Contracts' address 
+├─tests/ 				                     Directory for test files for testing your application and contracts
+├─main.py 				                   A Python srcipt to start a Python REST API
+├─package.json				               Contains NPM dependencies
+├─requirements.txt 				           Contains Python dependencies
+├─truffle-config.js 	               Truffle configuration file
 ```
 
 ------------
