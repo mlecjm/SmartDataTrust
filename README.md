@@ -103,8 +103,8 @@ python -m unittest tests/test_01_requester_add_consent.py
 ├─bootstrap.py 	
 ├─contracts/ 			                   Directory for Solidity contracts
 │  ├─libraries/
-│  │    ├─provableAPI.py
-│  │    ├─stringUtils.py       
+│  │    ├─provableAPI.sol
+│  │    ├─stringUtils.sol       
 │  ├─ConsentContract.sol 		            
 │  ├─DataAccessRequestContract.sol 		  
 │  ├─DataAccessResponseContract.sol 		  
