@@ -1,6 +1,6 @@
 # SmartDataTrust
 
-The SmartDataTrust is a platform that implemented a Python REST API with Smart Contracts written in Solidity to enable consent management in data sharing. The platform has completed development and integration tests performed on a local blockchain with Ganache. It provides essential technical insights into implementing consent management functionality among distributed services.
+The SmartDataTrust is a platform that implemented a Python REST API with Smart Contracts written in Solidity to enable consent management in data sharing. The platform has the complete development and integration tests performed on a local blockchain with Ganache. It provides essential technical insights into implementing consent management functionality among distributed services.
 
 ## Pre-requisites
 The platform consists of Smart Contracts and the Python code that implements methods followed by our proposed model, [Data Sharing State Machine (DSSM)](https://github.com/cucpbioinfo/BlockchainBasedDataSharing), incorporating Privacy by Design (PbD) to ensure compliance with the General Data Protection Regulation (GDPR) requirements.
