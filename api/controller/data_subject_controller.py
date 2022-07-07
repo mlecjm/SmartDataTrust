@@ -3,8 +3,9 @@ from marshmallow import ValidationError
 from api.constant.message_code import MessageCode
 from api.exception.service_exception import ServiceException
 from api.domain.data_subject_consent import DataSubjectConsent
-from api.schema.revoke_consent_schema import RevokeConsentSchema
+from api.schema.renew_consent_schema import RenewConsentSchema
 from api.util import exception_util, header_util, service_util
+from api.schema.revoke_consent_schema import RevokeConsentSchema
 from api.business_logic.data_subject_service import DataSubjectService
 from api.schema.add_data_subject_consent_schema import AddDataSubjectConsentSchema
 from api.schema.inquiry_data_subject_consent_schema import InquiryDataSubjectConsentSchema
@@ -74,7 +75,7 @@ def renew_consent():
   try:
     header = header_util.build_header(request.headers)
 
-    validated_data = RevokeConsentSchema().load(payload)
+    validated_data = RenewConsentSchema().load(payload)
     data_subject_consent = DataSubjectConsent(**validated_data)
 
     DataSubjectService().renew_consent(header, data_subject_consent)
