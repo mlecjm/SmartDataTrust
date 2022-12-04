@@ -152,9 +152,9 @@ contract DataSubjectConsentContract is IDataSubjectConsentContract, usingProvabl
       string memory requesterUrl
     ) public payable {
       if (provable_getPrice("URL") > address(this).balance) {
-				require(false, "Error: Not enough ether in contract, please add more.");
         emit LogFiredRequesterCallback(pseudonym, consentCode, consentVersion, responderId, requesterUrl, 
           "", "Error: Not enough ether in contract, please add more.");
+				require(false, "Error: Not enough ether in contract, please add more.");
       } else {
         string memory queryUrl = strConcat("json(", requesterUrl, ").statusResponse.code");
 

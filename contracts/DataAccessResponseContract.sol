@@ -93,6 +93,7 @@ contract DataAccessResponseContract is usingProvable {
   ) public payable {
     if (provable_getPrice("URL") > address(this).balance) {
       emit LogFiredDataTranferCallback(responseId, responderUrl, transferUrl, "", "Error: Not enough ether in contract, please add more.");
+      require(false, "Error: Not enough ether in contract, please add more.");
     } else {
       string memory queryUrl = strConcat("json(", responderUrl, ").statusResponse.code");
 

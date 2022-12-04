@@ -91,6 +91,7 @@ contract DataAccessRequestContract is IDataAccessRequestContract, usingProvable 
     if (provable_getPrice("URL") > address(this).balance) {
       emit LogFiredResponderCallback(requestId, pseudonym, consentCode, consentVersion, responderUrl, 
         "", "Error: Not enough ether in contract, please add more.");
+      require(false, "Error: Not enough ether in contract, please add more.");
     } else {
       string memory queryUrl = strConcat("json(", responderUrl, ").statusResponse.code");
 
