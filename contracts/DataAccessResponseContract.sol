@@ -17,7 +17,7 @@ contract DataAccessResponseContract is usingProvable {
 
   event LogSubmittedResponse(string _responseId, string _requestId, string _acceptedFlag, string _acceptedMessage,
     uint256 _createTimestamp, string _responderUrl);
-  event LogFiredDataTranferCallback(string _responseId, string _responderUrl, string _transferUrl,
+  event LogFiredDataTransferCallback(string _responseId, string _responderUrl, string _transferUrl,
     bytes32 _queryId, string _message);
   event LogReturnedDataTransferCallback(bytes32 _queryId, string _result);
 
