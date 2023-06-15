@@ -92,7 +92,7 @@ contract DataAccessResponseContract is usingProvable {
     string memory transferUrl
   ) public payable {
     if (provable_getPrice("URL") > address(this).balance) {
-      emit LogFiredDataTranferCallback(responseId, responderUrl, transferUrl, "", "Error: Not enough ether in contract, please add more.");
+      emit LogFiredDataTransferCallback(responseId, responderUrl, transferUrl, "", "Error: Not enough ether in contract, please add more.");
       require(false, "Error: Not enough ether in contract, please add more.");
     } else {
       string memory queryUrl = strConcat("json(", responderUrl, ").statusResponse.code");
@@ -103,7 +103,7 @@ contract DataAccessResponseContract is usingProvable {
 
       bytes32 queryId = provable_query("URL", queryUrl, jsonString);
       validIds[queryId] = true;
-      emit LogFiredDataTranferCallback(responseId, responderUrl, transferUrl, queryId, "Provable query was sent, standing by for the answer.");
+      emit LogFiredDataTransferCallback(responseId, responderUrl, transferUrl, queryId, "Provable query was sent, standing by for the answer.");
     }
   }
 
