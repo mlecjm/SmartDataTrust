@@ -1,5 +1,5 @@
 
-# SmartDataTrust
+# [SmartDataTrust](https://github.com/cucpbioinfo/SmartDataTrust)
 
 The SmartDataTrust is a platform that implemented a Python REST API with Smart Contracts written in Solidity to enable consent management in data sharing. The platform has the complete development and integration tests performed on a local blockchain with Ganache. It provides essential technical insights into implementing consent management functionality among distributed services.
 
